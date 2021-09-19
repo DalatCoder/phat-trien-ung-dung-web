@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Lab01 - 1812756 - Nguyễn Trọng Hiếu</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+            integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <title>1812756 - Nguyễn Trọng Hiếu - Lab01</title>
     </head>
     <body>
-        <h1>Tổng hợp các bài tập Lab01 học phần Phát triển ứng dụng web</h1>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center">
+                <h1 class="display-4">Nguyễn Trọng Hiếu</h1>
+                <h2 class="display-5">1812756</h2>
+                <p class="lead">
+                    Tổng hợp các bài tập của lab01 học phần Phát triển ứng dụng
+                    web
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row" id="content"></div>
+        </div>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"
+            integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <script>
+            const data = [
+                {
+                    title: "Bài 01 - Boostrap",
+                    content:
+                        "Giới thiệu về Bootstrap, xây dựng 1 website đơn giản",
+                    titleLink: "Xem Bài 01",
+                    link: "./bai-01/index.html",
+                },
+                {
+                    title: "Bài 02 - Bảng cửu chương",
+                    content: "Xây dựng ứng dụng vẽ bảng cửu chương",
+                    titleLink: "Xem Bài 02",
+                    link: "./bai-02/index.html",
+                },
+                {
+                    title: "Bài 03 - Tìm phụ âm",
+                    content:
+                        "Tìm vị trí của phụ âm đầu tiên trong chuỗi, đảo ngược số nhập vào",
+                    titleLink: "Xem Bài 03",
+                    link: "./bai-03/index.html",
+                },
+                {
+                    title: "Bài 04 - Ứng dụng máy tính đơn giản",
+                    content:
+                        "Xây dựng 1 máy tính đơn giản để thực hiện các phép toán cơ bản",
+                    titleLink: "Xem Bài 04",
+                    link: "./bai-04/index.html",
+                },
+                {
+                    title: "Bài 05 - Bảng cửu chương jQuery",
+                    content: "Sử dụng jQuery cho bài 02",
+                    titleLink: "Xem Bài 05",
+                    link: "./bai-05/index.html",
+                },
+                {
+                    title: "Bài 06 - Tìm phụ âm jQuery",
+                    content: "Sử dụng jQuery cho bài 03",
+                    titleLink: "Xem Bài 06",
+                    link: "./bai-06/index.html",
+                },
+            ];
+
+            document.getElementById("content").innerHTML = data
+                .map((d) => {
+                    return `
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">${d.title}</h5>
+                                <p class="card-text">${d.content}</p>
+                                <a
+                                    href="${d.link}"
+                                    class="btn btn-primary"
+                                    >${d.titleLink}</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                `;
+                })
+                .join("");
+        </script>
     </body>
 </html>
